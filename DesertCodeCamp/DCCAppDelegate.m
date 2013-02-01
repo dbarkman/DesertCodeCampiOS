@@ -18,8 +18,8 @@
 {
 	[Flurry startSession:@"HN3K9PGV7HXR2DD9X38K"];
 	
-	NSString *shortName = @"nov2012";
-	NSString *campId = @"5";
+	NSString *shortName = @"apr2013";
+	NSString *campId = @"6";
 	NSString *getSessionsByCampIdURL = @"http://desertcodecamp.com/Services/Session.svc/GetSessionsByCampId?campId=%@";
 	NSString *getMyPresentationsByLoginURL = @"http://desertcodecamp.com/Services/Session.svc/GetMyPresentationsByLogin?login=%@&shortName=%@";
 	NSString *getMyInterestedInSessionsByLoginURL = @"http://desertcodecamp.com/Services/Session.svc/GetMyInterestedInSessionsByLogin?login=%@&shortName=%@";

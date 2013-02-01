@@ -64,7 +64,7 @@
 	nextY += dccAddress.frame.size.height - 10;
 	
 	UITextView *dccWhen = [[UITextView alloc] initWithFrame:CGRectMake(10.0f, nextY, size.width - 20.0f, (size.height - navHeight))];
-	[dccWhen setText:@"When: November 17, 2012 8am - 6pm"];
+	[dccWhen setText:@"When: April 20, 2013 8am - 6pm"];
 	[dccWhen setFont:[UIFont systemFontOfSize:15.0f]];
 	[dccWhen sizeToFit];
 	[dccWhen setEditable:NO];

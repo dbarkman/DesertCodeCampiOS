@@ -85,10 +85,10 @@
 			[slComposer dismissViewControllerAnimated:YES completion:nil];
 		};
 		
-		[slComposer setInitialText:[NSString stringWithFormat:@"#dcc12 "]];
+		[slComposer setInitialText:[NSString stringWithFormat:@"#dcc13 "]];
 		[slComposer setCompletionHandler:completionHandler];
 		[self presentViewController:slComposer animated:YES completion:nil];
-		[Flurry logEvent:@"TweetSentForDCC12"];
+		[Flurry logEvent:@"TweetSentForDCC13"];
 	}
 }
 

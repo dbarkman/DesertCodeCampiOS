@@ -168,7 +168,7 @@
 			[twitterHandles appendString:[presenterTwitterHandles objectAtIndex:i]];
 		}
 		
-		[slComposer setInitialText:[NSString stringWithFormat:@"In session: %@ by %@ at #dcc12", sessionName, twitterHandles]];
+		[slComposer setInitialText:[NSString stringWithFormat:@"In session: %@ by %@ at #dcc13", sessionName, twitterHandles]];
 		[slComposer setCompletionHandler:completionHandler];
 		[self presentViewController:slComposer animated:YES completion:nil];
 		[Flurry logEvent:@"TweetSentForSession"];
@@ -202,7 +202,7 @@
 					[slComposer dismissViewControllerAnimated:YES completion:nil];
 				};
 				
-				[slComposer setInitialText:[NSString stringWithFormat:@"#dcc12 %@ ", twitterHandle]];
+				[slComposer setInitialText:[NSString stringWithFormat:@"#dcc13 %@ ", twitterHandle]];
 				[slComposer setCompletionHandler:completionHandler];
 				[self presentViewController:slComposer animated:YES completion:nil];
 				[Flurry logEvent:@"TweetSentToPresenter"];
