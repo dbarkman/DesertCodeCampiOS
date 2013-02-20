@@ -169,8 +169,7 @@
 				}
 				
 				filterNamesArray = [tempFilterNamesArray sortedArrayUsingSelector:@selector(caseInsensitiveCompare:)];
-			}
-			@catch (NSException *exception) {
+			} @catch (NSException *exception) {
 				[[[UIAlertView alloc] initWithTitle:@"Problem Parsing\nSession Data" message:nil delegate:nil cancelButtonTitle:@"OK" otherButtonTitles: nil] show];
 			}
 		}

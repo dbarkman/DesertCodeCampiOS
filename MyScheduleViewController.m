@@ -231,7 +231,7 @@
 	return cell;
 }
 
-- (void)tableView:(UITableView *) tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
 {
 	if (editingStyle == UITableViewCellEditingStyleDelete) {
 		NSMutableArray *tempArray = [allSessionsDict objectForKey:[filterNamesArray objectAtIndex:[indexPath section]]];
@@ -245,6 +245,7 @@
 			[allSessionsDict setObject:tempArray forKey:[filterNamesArray objectAtIndex:[indexPath section]]];
 		}
 		
+		//coredata stuff
 		[context deleteObject:[masterSessionObjectsDict objectForKey:sessionName]];
 		[self saveChanges];
 		
