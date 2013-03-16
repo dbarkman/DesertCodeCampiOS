@@ -56,6 +56,13 @@
 	[self parseSessionsArray];
 }
 
+- (void)viewDidAppear:(BOOL)animated
+{
+	[super viewDidAppear:animated];
+	
+	[self.tableView deselectRowAtIndexPath:[self.tableView indexPathForSelectedRow] animated:YES];
+}
+
 - (IBAction)aboutClicked
 {
 	AboutViewController *aboutViewController = [[AboutViewController alloc] init];
@@ -123,7 +130,7 @@
 	NSString *filterName = [filterNamesArray objectAtIndex:section];
 	switch (filterType) {
 		case 0:
-			if (filterName == @"Not Scheduled"){
+			if ([filterName isEqual: @"Not Scheduled"]){
 				return filterName;
 			} else {
 				return [self formatTimeFilterLabel:filterName];

@@ -146,6 +146,48 @@
 			name = Images;
 			sourceTree = "<group>";
 		};
+		63429F0416EA809B005E5C84 /* Tracks */ = {
+			isa = PBXGroup;
+			children = (
+				63BDEFEB16351ABE0004F55F /* TracksViewController.h */,
+				63BDEFEC16351ABE0004F55F /* TracksViewController.m */,
+			);
+			name = Tracks;
+			sourceTree = "<group>";
+		};
+		63429F0516EA80A6005E5C84 /* Sessions */ = {
+			isa = PBXGroup;
+			children = (
+				631F27791641CEA40062102F /* Models */,
+				63BDEFEE16351AEF0004F55F /* SessionsViewController.h */,
+				63BDEFEF16351AEF0004F55F /* SessionsViewController.m */,
+				63BDF0061635AE190004F55F /* SessionDetailViewController.h */,
+				63BDF0071635AE190004F55F /* SessionDetailViewController.m */,
+			);
+			name = Sessions;
+			sourceTree = "<group>";
+		};
+		63429F0616EA80C4005E5C84 /* MySessions */ = {
+			isa = PBXGroup;
+			children = (
+				6351F859163E682000B13D3E /* MySessionsViewController.h */,
+				6351F85A163E682000B13D3E /* MySessionsViewController.m */,
+				6351F89C16402CAE00B13D3E /* UsernameViewController.h */,
+				6351F89D16402CAE00B13D3E /* UsernameViewController.m */,
+				6351F89E16402CAF00B13D3E /* UsernameViewController.xib */,
+			);
+			name = MySessions;
+			sourceTree = "<group>";
+		};
+		63429F0716EA80CC005E5C84 /* MySchedule */ = {
+			isa = PBXGroup;
+			children = (
+				6351F85C163E684300B13D3E /* MyScheduleViewController.h */,
+				6351F85D163E684300B13D3E /* MyScheduleViewController.m */,
+			);
+			name = MySchedule;
+			sourceTree = "<group>";
+		};
 		6351F85F163F3A1400B13D3E /* Icons */ = {
 			isa = PBXGroup;
 			children = (
@@ -204,27 +246,17 @@
 		63BDEFD4163519FC0004F55F /* DesertCodeCamp */ = {
 			isa = PBXGroup;
 			children = (
-				63330C361646520D00230CB1 /* Images */,
-				631F27791641CEA40062102F /* Models */,
-				6351F85F163F3A1400B13D3E /* Icons */,
 				63BDEFDD163519FC0004F55F /* DCCAppDelegate.h */,
 				63BDEFDE163519FC0004F55F /* DCCAppDelegate.m */,
-				63BDF0061635AE190004F55F /* SessionDetailViewController.h */,
-				63BDF0071635AE190004F55F /* SessionDetailViewController.m */,
-				63BDEFEE16351AEF0004F55F /* SessionsViewController.h */,
-				63BDEFEF16351AEF0004F55F /* SessionsViewController.m */,
-				63BDEFEB16351ABE0004F55F /* TracksViewController.h */,
-				63BDEFEC16351ABE0004F55F /* TracksViewController.m */,
+				63429F0416EA809B005E5C84 /* Tracks */,
+				63429F0516EA80A6005E5C84 /* Sessions */,
+				63429F0616EA80C4005E5C84 /* MySessions */,
+				63429F0716EA80CC005E5C84 /* MySchedule */,
 				631F27A41644DFD60062102F /* AboutViewController.h */,
 				631F27A51644DFD60062102F /* AboutViewController.m */,
-				6351F859163E682000B13D3E /* MySessionsViewController.h */,
-				6351F85A163E682000B13D3E /* MySessionsViewController.m */,
-				6351F89C16402CAE00B13D3E /* UsernameViewController.h */,
-				6351F89D16402CAE00B13D3E /* UsernameViewController.m */,
-				6351F89E16402CAF00B13D3E /* UsernameViewController.xib */,
-				6351F85C163E684300B13D3E /* MyScheduleViewController.h */,
-				6351F85D163E684300B13D3E /* MyScheduleViewController.m */,
 				63BDEFD5163519FC0004F55F /* Supporting Files */,
+				63330C361646520D00230CB1 /* Images */,
+				6351F85F163F3A1400B13D3E /* Icons */,
 			);
 			path = DesertCodeCamp;
 			sourceTree = "<group>";

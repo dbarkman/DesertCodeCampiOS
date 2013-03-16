@@ -61,6 +61,13 @@
 	self.toolbarItems = items;
 }
 
+- (void)viewDidAppear:(BOOL)animated
+{
+	[super viewDidAppear:animated];
+
+	[self.tableView deselectRowAtIndexPath:[self.tableView indexPathForSelectedRow] animated:YES];
+}
+
 - (void)filterChange:(id)sender
 {
 	switch ([sender selectedSegmentIndex]) {
@@ -204,7 +211,7 @@
 			[[cell textLabel] setText:filterName];
 			break;
 		case 1:
-			if (filterName == @"Not Scheduled"){
+			if ([filterName isEqual: @"Not Scheduled"]){
 				[[cell textLabel] setText:filterName];
 			} else {
 				[[cell textLabel] setText:[self formatTimeFilterLabel:filterName]];
@@ -229,7 +236,7 @@
 {
 	SessionsViewController *sessionsViewController = [[SessionsViewController alloc] init];
 	NSString *filterName = [filterNamesArray objectAtIndex:[indexPath row]];
-	[sessionsViewController setFilter:(filterType == 1 && filterName != @"Not Scheduled") ? [self formatTimeFilterLabel:filterName] : filterName];
+	[sessionsViewController setFilter:(filterType == 1 && ![filterName isEqual: @"Not Scheduled"]) ? [self formatTimeFilterLabel:filterName] : filterName];
 	[sessionsViewController setFilterType:filterType];
 	[sessionsViewController setSessionsArray:[allSessionsDict objectForKey:filterName]];
 	

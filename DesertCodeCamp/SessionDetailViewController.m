@@ -112,6 +112,8 @@
 	if (mySceduleIsParent == YES) {
 		[[self navigationController] setToolbarHidden:YES];
 	}
+	
+	[self.tableView deselectRowAtIndexPath:[self.tableView indexPathForSelectedRow] animated:YES];
 }
 
 - (void)viewWillDisappear:(BOOL)animated
@@ -342,6 +344,8 @@
 		twitterHandle = [presenterTwitterHandles objectAtIndex:[indexPath row]];
 		emailAddress = [presenterEmails objectAtIndex:[indexPath row]];
 		[self contactPresenter];
+		
+		[self.tableView deselectRowAtIndexPath:[self.tableView indexPathForSelectedRow] animated:YES];
 	}
 }
 

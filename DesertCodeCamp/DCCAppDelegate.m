@@ -16,7 +16,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-	[Flurry startSession:@"HN3K9PGV7HXR2DD9X38K"];
+	[Flurry startSession:@"XRPG3ZCKS5SZ7S4Y835H"];
 	
 	NSString *shortName = @"apr2013";
 	NSString *campId = @"6";

@@ -71,6 +71,13 @@
 	[self loadAllSessions];
 }
 
+- (void)viewDidAppear:(BOOL)animated
+{
+	[super viewDidAppear:animated];
+	
+	[self.tableView deselectRowAtIndexPath:[self.tableView indexPathForSelectedRow] animated:YES];
+}
+
 - (void)viewWillDisappear:(BOOL)animated
 {
 	if ([self isEditing]) {
@@ -191,7 +198,7 @@
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
 {
 	NSString *filterName = [filterNamesArray objectAtIndex:section];
-	if (filterName == @"Not Scheduled"){
+	if ([filterName isEqual: @"Not Scheduled"]){
 		return filterName;
 	} else if ([filterName length] == 0) {
 		return filterName;
