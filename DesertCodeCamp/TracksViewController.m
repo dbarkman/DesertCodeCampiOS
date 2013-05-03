@@ -43,9 +43,9 @@
 	
 	[self fetchDesertCodeCamp];
 	
-	UIBarButtonItem *changeUsernameButton = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"Twitter.png"] style:UIBarButtonItemStyleBordered target:self action:@selector(tweet)];
-	[changeUsernameButton setImageInsets:UIEdgeInsetsMake(5.0f, 0.0f, 5.0f, 0.0f)];
-	[[self navigationItem] setRightBarButtonItem:changeUsernameButton];
+	UIBarButtonItem *tweetButton = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"Twitter.png"] style:UIBarButtonItemStyleBordered target:self action:@selector(tweet)];
+	[tweetButton setImageInsets:UIEdgeInsetsMake(5.0f, 0.0f, 5.0f, 0.0f)];
+	[[self navigationItem] setRightBarButtonItem:tweetButton];
 
 	UIBarButtonItem *flexiableSpace = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:self action:nil];
 	UIBarButtonItem *about = [[UIBarButtonItem alloc] initWithTitle:@"About" style:UIBarButtonItemStyleBordered target:self action:@selector(aboutClicked)];
