@@ -16,10 +16,11 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-	[Flurry startSession:@"XRPG3ZCKS5SZ7S4Y835H"];
+	[Flurry setCrashReportingEnabled:YES];
+	[Flurry startSession:@"P2C4F8TZSWSYH43RDKRR"];
 	
-	NSString *shortName = @"apr2013";
-	NSString *campId = @"6";
+	NSString *shortName = @"nov2013";
+	NSString *campId = @"7";
 	NSString *getSessionsByCampIdURL = @"http://desertcodecamp.com/Services/Session.svc/GetSessionsByCampId?campId=%@";
 	NSString *getMyPresentationsByLoginURL = @"http://desertcodecamp.com/Services/Session.svc/GetMyPresentationsByLogin?login=%@&shortName=%@";
 	NSString *getMyInterestedInSessionsByLoginURL = @"http://desertcodecamp.com/Services/Session.svc/GetMyInterestedInSessionsByLogin?login=%@&shortName=%@";

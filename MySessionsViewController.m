@@ -283,13 +283,13 @@
 {
 	switch (filterType) {
 		case 0:
-			message = @"This screen will display sessions you've marked as Interested on the DesertCodeCamp.com website. In order to mark sessions as Interested,  log in to your account, or create a new account, at DesertCodeCamp.com. When viewing the list of sessions, click the \"More Info\" button, review the session, and if interested, check \"I might attend\" and click \"Save\". Once you've marked some sessions as Interested, return here and tap the Refresh button.";
+			message = @"This screen will display sessions you've marked as Interested on the DesertCodeCamp.com website. In order to mark sessions as Interested,  log in to your account, or create a new account, at DesertCodeCamp.com. When viewing the list of sessions, click the \"More Info\" button, review the session, and if interested, set \"I want to attend this\" to Yes and click \"Save\". Once you've marked some sessions as Interested, return here and tap the Refresh button.";
 			
 			[Flurry logEvent:@"No Interested Session Data"];
 			break;
 		case 1:
-			message = @"This screen will display sessions you've volunteered to present. In order to volunteer to present a session, log in to your account, or create a new account, at DesertCodeCamp.com. When viewing the list of sessions, fill out the form at the top of the page, with all the details, for your suggested session. A Desert Code Camp coordinator will then contact you.";
-//			message = @"This screen will display sessions you've volunteered to present. The April 2013 camp is no longer taking new sessions, but some sessions still need presenters. In order to volunteer to present a session, log in to your account, or create a new account, at DesertCodeCamp.com. When viewing the list of sessions, look for sessions marked with the \"Needs a Presenter\" icon. Click the \"More Info\" button, review the session, and if interested, check \"Teach This\" and click \"Save\". A Desert Code Camp coordinator will then contact you.";
+//			message = @"This screen will display sessions you've volunteered to present. In order to volunteer to present a session, log in to your account, or create a new account, at DesertCodeCamp.com. When viewing the list of sessions, fill out the form at the top of the page, with all the details, for your suggested session. A Desert Code Camp coordinator will then contact you.";
+			message = @"This screen will display sessions you've volunteered to present. The November 2013 camp is no longer taking new sessions, but some sessions still need presenters. In order to volunteer to present a session, log in to your account, or create a new account, at DesertCodeCamp.com. When viewing the list of sessions, look for sessions marked with the \"Needs a Presenter\" icon. Click the \"More Info\" button, review the session, and if interested, set \"I want to teach this\" to Yes and click \"Save\". A Desert Code Camp coordinator will then contact you.";
 			
 			[Flurry logEvent:@"No Presenting Session Data"];
 			break;
