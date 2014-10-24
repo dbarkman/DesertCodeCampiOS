@@ -16,25 +16,26 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-	[Flurry setCrashReportingEnabled:YES];
-	[Flurry startSession:@"P2C4F8TZSWSYH43RDKRR"];
+	[Flurry startSession:@"XRPG3ZCKS5SZ7S4Y835H"];
 	
-	NSString *shortName = @"nov2013";
-	NSString *campId = @"7";
-	NSString *getSessionsByCampIdURL = @"http://desertcodecamp.com/Services/Session.svc/GetSessionsByCampId?campId=%@";
-	NSString *getMyPresentationsByLoginURL = @"http://desertcodecamp.com/Services/Session.svc/GetMyPresentationsByLogin?login=%@&shortName=%@";
-	NSString *getMyInterestedInSessionsByLoginURL = @"http://desertcodecamp.com/Services/Session.svc/GetMyInterestedInSessionsByLogin?login=%@&shortName=%@";
+	NSString *subdomain = @"oct2014";
+    NSString *domain = @"desertcodecamp.com";
+	NSString *conferenceId = @"9";
+	NSString *getSessionsByConferenceIdURL = @"http://myconferenceevents.com/Services/Session.svc/GetSessionsByConferenceId?conferenceId=%@";
+	NSString *getMyPresentationsByLoginURL = @"http://myconferenceevents.com/Services/Session.svc/GetMyPresentationsByLogin?login=%@&subdomain=%@&domain=%@";
+	NSString *getMyInterestedInSessionsByLoginURL = @"http://myconferenceevents.com/Services/Session.svc/GetMyInterestedInSessionsByLogin?login=%@&subdomain=%@&domain=%@";
 	
-	[[NSUserDefaults standardUserDefaults] setObject:shortName forKey:@"shortName"];
-	[[NSUserDefaults standardUserDefaults] setObject:campId forKey:@"campId"];
-	[[NSUserDefaults standardUserDefaults] setObject:getSessionsByCampIdURL forKey:@"getSessionsByCampIdURL"];
+    [[NSUserDefaults standardUserDefaults] setObject:subdomain forKey:@"subdomain"];
+    [[NSUserDefaults standardUserDefaults] setObject:domain forKey:@"domain"];
+	[[NSUserDefaults standardUserDefaults] setObject:conferenceId forKey:@"conferenceId"];
+	[[NSUserDefaults standardUserDefaults] setObject:getSessionsByConferenceIdURL forKey:@"getSessionsByConferenceIdURL"];
 	[[NSUserDefaults standardUserDefaults] setObject:getMyPresentationsByLoginURL forKey:@"getMyPresentationsByLoginURL"];
 	[[NSUserDefaults standardUserDefaults] setObject:getMyInterestedInSessionsByLoginURL forKey:@"getMyInterestedInSessionsByLoginURL"];
 
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
 
 	TracksViewController *tracksViewController = [[TracksViewController alloc] init];
-	[tracksViewController setUrl:[NSString stringWithFormat:getSessionsByCampIdURL, campId]];
+	[tracksViewController setUrl:[NSString stringWithFormat:getSessionsByConferenceIdURL, conferenceId]];
 	[tracksViewController setFilterType:0];
 	[tracksViewController setTitle:@"All Sessions"];
 	
